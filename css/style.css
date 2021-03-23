@@ -195,6 +195,21 @@ html {
   height: 57px;
 }
 
+.page .btn {
+  position: fixed;
+  color: var(--color-1);
+  border: 2px solid var(--color-1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  bottom: 50px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  cursor: pointer;
+}
+
 .page .banner {
   position: relative;
   height: 85vh;
@@ -304,6 +319,7 @@ html {
 }
 
 .page .banner__btn {
+  color: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -347,11 +363,12 @@ html {
 @media (orientation: landscape) and (min-width: 1024px) {
   .page .banner__btn:hover {
     cursor: pointer;
-    border: 4px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
   }
 }
 
-.page .start {
+.page .main .start {
   height: 100vh;
   background-color: black;
   color: var(--color-1);
@@ -359,18 +376,18 @@ html {
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .start {
+  .page .main .start {
     height: 60vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .start {
+  .page .main .start {
     height: 600px;
   }
 }
 
-.page .start__info {
+.page .main .start__info {
   margin: 0 10px;
   padding-top: 20vh;
   padding-bottom: 40px;
@@ -378,38 +395,38 @@ html {
 }
 
 @media (min-width: 400px) {
-  .page .start__info {
+  .page .main .start__info {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 768px) {
-  .page .start__info {
+  .page .main .start__info {
     padding-top: 20vh;
   }
 }
 
 @media (orientation: landscape) {
-  .page .start__info {
+  .page .main .start__info {
     font-size: 1.3rem;
     padding-bottom: 8vh;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .start__info {
+  .page .main .start__info {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .start__info {
+  .page .main .start__info {
     padding-top: 30vh;
     font-size: 2rem;
   }
 }
 
-.page .start__text {
+.page .main .start__text {
   margin: 0 5px;
   font-size: 1rem;
   padding: 5px;
@@ -417,32 +434,32 @@ html {
 }
 
 @media (min-width: 360px) {
-  .page .start__text {
+  .page .main .start__text {
     padding-bottom: 50px;
   }
 }
 
 @media (min-width: 400px) {
-  .page .start__text {
+  .page .main .start__text {
     font-size: 1.2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .page .start__text {
+  .page .main .start__text {
     padding-bottom: 2vh;
   }
 }
 
 @media (orientation: landscape) {
-  .page .start__text {
+  .page .main .start__text {
     font-size: 0.9rem;
     padding-bottom: 8vh;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .start__text {
+  .page .main .start__text {
     font-size: 1.2rem;
     padding-bottom: 8vh;
     margin: 0 20px;
@@ -450,7 +467,7 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .page .start__text {
+  .page .main .start__text {
     margin-left: 20vw;
     margin-right: 20vw;
     line-height: 1.5;
@@ -458,89 +475,74 @@ html {
   }
 }
 
-.page .start__button {
+.page .main .start__button {
   border: 2px solid var(--color-1);
   background-color: transparent;
   color: var(--color-1);
   font-size: 1.2rem;
   padding: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 @media (min-width: 400px) {
-  .page .start__button {
+  .page .main .start__button {
     font-size: 1.4rem;
   }
 }
 
 @media (orientation: landscape) {
-  .page .start__button {
+  .page .main .start__button {
     font-size: 1.2rem;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .start__button {
+  .page .main .start__button {
     font-size: 1.4rem;
   }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
-  .page .start .start__button:hover {
-    -webkit-animation: btn .1s forwards linear;
-            animation: btn .1s forwards linear;
+  .page .main .start .start__button:hover {
+    background-color: var(--color-1);
+    color: black;
   }
 }
 
-@-webkit-keyframes btn {
-  0% {
-    padding: 10px;
-  }
-  100% {
-    padding: 14px;
-  }
-}
-
-@keyframes btn {
-  0% {
-    padding: 10px;
-  }
-  100% {
-    padding: 14px;
-  }
-}
-
-.page .offer {
+.page .main .offer {
   position: relative;
   min-height: 100vh;
   background-color: var(--color-1);
 }
 
-.page .offer__text {
+.page .main .offer__text {
   padding-top: 20vh;
   text-align: center;
   font-size: 2rem;
 }
 
 @media (min-width: 768px) {
-  .page .offer__text {
+  .page .main .offer__text {
     padding-top: 20vh;
   }
 }
 
 @media (orientation: landscape) {
-  .page .offer__text {
+  .page .main .offer__text {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .offer__text {
+  .page .main .offer__text {
     padding-top: 25vh;
     font-size: 2rem;
   }
 }
 
-.page .offer .container {
+.page .main .offer .container {
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -558,7 +560,7 @@ html {
   z-index: 1;
 }
 
-.page .offer .container__card {
+.page .main .offer .container__card {
   position: relative;
   width: 250px;
   height: 350px;
@@ -583,7 +585,7 @@ html {
           backdrop-filter: blur(5px);
 }
 
-.page .offer .container__card .card__content {
+.page .main .offer .container__card .card__content {
   padding: 20px;
   text-align: center;
   -webkit-transition: 0.5s;
@@ -592,7 +594,7 @@ html {
           transform: translateY(50px);
 }
 
-.page .offer .container__card .card__content i {
+.page .main .offer .container__card .card__content i {
   position: absolute;
   top: -80px;
   left: 30px;
@@ -601,18 +603,18 @@ html {
   pointer-events: none;
 }
 
-.page .offer .container__card .card__content h3 {
+.page .main .offer .container__card .card__content h3 {
   font-size: 1.8em;
   color: black;
   z-index: 1;
 }
 
-.page .offer .container__card .card__content p {
+.page .main .offer .container__card .card__content p {
   font-size: 1em;
   color: black;
 }
 
-.page .manufacturers {
+.page .main .manufacturers {
   width: 100%;
   height: 135vh;
   text-align: center;
@@ -621,73 +623,73 @@ html {
 }
 
 @media (min-width: 360px) {
-  .page .manufacturers {
+  .page .main .manufacturers {
     height: 120vh;
   }
 }
 
 @media (min-width: 400px) {
-  .page .manufacturers {
+  .page .main .manufacturers {
     height: 110vh;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .manufacturers {
+  .page .main .manufacturers {
     height: 85vh;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .manufacturers {
+  .page .main .manufacturers {
     height: 100vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers {
+  .page .main .manufacturers {
     height: 600px;
   }
 }
 
-.page .manufacturers__title {
+.page .main .manufacturers__title {
   font-size: 2rem;
   padding-top: 20vh;
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__title {
+  .page .main .manufacturers__title {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .manufacturers__title {
+  .page .main .manufacturers__title {
     padding-top: 20vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers__title {
+  .page .main .manufacturers__title {
     padding-top: 20vh;
     font-size: 2rem;
     margin-bottom: 20px;
   }
 }
 
-.page .manufacturers__info {
+.page .main .manufacturers__info {
   margin-top: 20px;
 }
 
 @media (min-width: 400px) {
-  .page .manufacturers__info {
+  .page .main .manufacturers__info {
     font-size: 1.1rem;
     margin: 20px 10px;
   }
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__info {
+  .page .main .manufacturers__info {
     font-size: 0.8rem;
     margin-top: 7px;
     padding: 0 10vw;
@@ -695,13 +697,13 @@ html {
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .manufacturers__info {
+  .page .main .manufacturers__info {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers__info {
+  .page .main .manufacturers__info {
     font-size: 1.2rem;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -709,12 +711,12 @@ html {
   }
 }
 
-.page .manufacturers__slider {
+.page .main .manufacturers__slider {
   margin-top: 20px;
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__slider .container {
+  .page .main .manufacturers__slider .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 25vw 45vw;
@@ -727,20 +729,20 @@ html {
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .manufacturers__slider .container {
+  .page .main .manufacturers__slider .container {
     padding: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers__slider .container {
+  .page .main .manufacturers__slider .container {
     -ms-grid-columns: 20vw 40vw;
         grid-template-columns: 20vw 40vw;
     padding: 0 20vw;
   }
 }
 
-.page .manufacturers__slider .container__img {
+.page .main .manufacturers__slider .container__img {
   grid-area: picture;
   -o-object-fit: cover;
      object-fit: cover;
@@ -750,31 +752,31 @@ html {
 }
 
 @media (orientation: portrait) and (min-width: 400px) {
-  .page .manufacturers__slider .container__img {
+  .page .main .manufacturers__slider .container__img {
     width: 40%;
   }
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__slider .container__img {
+  .page .main .manufacturers__slider .container__img {
     width: 100%;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .manufacturers__slider .container__img {
+  .page .main .manufacturers__slider .container__img {
     width: 100%;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers__slider .container__img {
+  .page .main .manufacturers__slider .container__img {
     width: 85%;
   }
 }
 
-.page .manufacturers__slider .container__title {
+.page .main .manufacturers__slider .container__title {
   grid-area: text1;
   margin: 15px 0;
   -webkit-animation: color 6s linear infinite;
@@ -782,7 +784,7 @@ html {
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__slider .container__title {
+  .page .main .manufacturers__slider .container__title {
     font-size: 1rem;
     margin: 7px 7px;
     padding: 0 0px 20px 20px;
@@ -790,13 +792,13 @@ html {
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .manufacturers__slider .container__title {
+  .page .main .manufacturers__slider .container__title {
     font-size: 1.2rem;
     padding: 0;
   }
 }
 
-.page .manufacturers__slider .container__info {
+.page .main .manufacturers__slider .container__info {
   text-align: justify;
   grid-area: text2;
   margin: 0px 12px;
@@ -805,21 +807,21 @@ html {
 }
 
 @media (orientation: portrait) and (min-width: 400px) {
-  .page .manufacturers__slider .container__info {
+  .page .main .manufacturers__slider .container__info {
     font-size: 1.1rem;
     margin: 10px 30px;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .manufacturers__slider .container__info {
+  .page .main .manufacturers__slider .container__info {
     font-size: 1.1rem;
     margin: 0 5vw;
   }
 }
 
 @media (orientation: landscape) {
-  .page .manufacturers__slider .container__info {
+  .page .main .manufacturers__slider .container__info {
     font-size: 0.7rem;
     margin: 7px 7px;
     padding: 0 0px 20px 20px;
@@ -827,13 +829,13 @@ html {
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .manufacturers__slider .container__info {
+  .page .main .manufacturers__slider .container__info {
     font-size: 0.8rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .manufacturers__slider .container__info {
+  .page .main .manufacturers__slider .container__info {
     font-size: 0.9rem;
     line-height: 2;
     padding: 0 30px 0 0;
@@ -883,56 +885,56 @@ html {
   }
 }
 
-.page .realizations {
+.page .main .realizations {
   background-color: var(--color-1);
   color: black;
 }
 
-.page .realizations__title {
+.page .main .realizations__title {
   font-size: 2rem;
   padding: 20vh 0 5vh 0;
   text-align: center;
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .realizations__title {
+  .page .main .realizations__title {
     padding-top: 20vh;
   }
 }
 
 @media (orientation: landscape) {
-  .page .realizations__title {
+  .page .main .realizations__title {
     font-size: 1.2rem;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .realizations__title {
+  .page .main .realizations__title {
     font-size: 1.7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .realizations__title {
+  .page .main .realizations__title {
     font-size: 2rem;
     padding-top: 20vh;
   }
 }
 
-.page .realizations .swiper-container-first {
+.page .main .realizations .swiper-container-first {
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 @media (min-width: 1024px) {
-  .page .realizations .swiper-container-first {
+  .page .main .realizations .swiper-container-first {
     width: 80%;
     margin: 0 auto;
   }
 }
 
-.page .realizations .swiper-container-first .swiper-wrapper .swiper-slide img {
+.page .main .realizations .swiper-container-first .swiper-wrapper .swiper-slide img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100vw;
@@ -940,12 +942,12 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .page .realizations .swiper-container-first .swiper-wrapper .swiper-slide img {
+  .page .main .realizations .swiper-container-first .swiper-wrapper .swiper-slide img {
     height: 80vh;
   }
 }
 
-.page .realizations .swiper-container-first .swiper-button {
+.page .main .realizations .swiper-container-first .swiper-button {
   position: absolute;
   color: black;
   width: 40px;
@@ -958,23 +960,23 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .page .realizations .swiper-container-first .swiper-button {
+  .page .main .realizations .swiper-container-first .swiper-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.page .realizations .swiper-container-first .swiper-button:hover {
+.page .main .realizations .swiper-container-first .swiper-button:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.page .realizations .swiper-container-first .swiper-button::after {
+.page .main .realizations .swiper-container-first .swiper-button::after {
   font-size: 20px;
   font-weight: bold;
 }
 
-.page .contact {
+.page .main .contact {
   width: 100%;
   height: 75vh;
   background-color: var(--color-1);
@@ -984,42 +986,42 @@ html {
 }
 
 @media (min-width: 400px) {
-  .page .contact {
+  .page .main .contact {
     height: 80vh;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .contact {
+  .page .main .contact {
     height: 30vh;
   }
 }
 
 @media (orientation: landscape) {
-  .page .contact {
+  .page .main .contact {
     height: 85vh;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .contact {
+  .page .main .contact {
     height: 80vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .contact {
+  .page .main .contact {
     height: 500px;
     padding-top: 20vh;
   }
 }
 
-.page .contact__title {
+.page .main .contact__title {
   padding: 10px 0;
   font-size: 2rem;
 }
 
-.page .contact__container {
+.page .main .contact__container {
   margin-top: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1033,19 +1035,19 @@ html {
 }
 
 @media (min-width: 360px) {
-  .page .contact__container {
+  .page .main .contact__container {
     margin-top: 40px;
   }
 }
 
 @media (min-width: 400px) {
-  .page .contact__container {
+  .page .main .contact__container {
     margin-top: 70px;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .page .contact__container {
+  .page .main .contact__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1055,7 +1057,7 @@ html {
 }
 
 @media (orientation: landscape) {
-  .page .contact__container {
+  .page .main .contact__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1065,67 +1067,68 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .page .contact__container {
-    margin-top: 80px;
+  .page .main .contact__container {
+    margin: 80px auto 0 auto;
+    width: 60%;
   }
 }
 
-.page .contact__container .com {
+.page .main .contact__container .com {
   padding: 10px;
 }
 
 @media (orientation: landscape) {
-  .page .contact__container .com {
+  .page .main .contact__container .com {
     width: 50%;
   }
 }
 
-.page .contact__container .com__icon {
+.page .main .contact__container .com__icon {
   font-size: 2.5rem;
 }
 
 @media (min-width: 360px) {
-  .page .contact__container .com__icon {
+  .page .main .contact__container .com__icon {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 400px) {
-  .page .contact__container .com__icon {
+  .page .main .contact__container .com__icon {
     font-size: 4rem;
   }
 }
 
 @media (orientation: landscape) {
-  .page .contact__container .com__icon {
+  .page .main .contact__container .com__icon {
     font-size: 3rem;
   }
 }
 
 @media (orientation: landscape) and (min-width: 680px) {
-  .page .contact__container .com__icon {
+  .page .main .contact__container .com__icon {
     font-size: 4rem;
   }
 }
 
-.page .contact__container .com__info {
+.page .main .contact__container .com__info {
   padding: 8px;
 }
 
 @media (min-width: 400px) {
-  .page .contact__container .com__info {
+  .page .main .contact__container .com__info {
     font-size: 1.3rem;
   }
 }
 
-.page .page__footer {
+.page .footer {
   background-color: black;
   color: var(--color-1);
   font-family: 1rem;
   text-align: center;
 }
 
-.page .page__footer p {
+.page .footer p {
   padding: 10px 10px;
 }
 /*# sourceMappingURL=style.css.map */
