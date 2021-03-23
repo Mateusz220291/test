@@ -230,7 +230,7 @@ html {
 }
 
 .page .banner__image {
-  background-image: url(/IMG/samples.jpg);
+  background-image: url(../IMG/samples.jpg);
   background-position: 50% 75%;
   background-size: cover;
   background-repeat: no-repeat;
